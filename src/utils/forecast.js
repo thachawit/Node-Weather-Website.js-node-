@@ -9,7 +9,7 @@ request({url , json:true},(error,{body})=>{
         callback('unable to find a location',undefined)  
     }else{
         callback(undefined ,(body.daily.data[0].summary+' Now the temperature is ' + body.currently.temperature +'\n' + ', The percentage that precipitation is going to happen is '+ body.currently.precipProbability+'%.' + 'The highest apparent temperature is at '+ body.daily.data[0].apparentTemperatureHigh+' and the Lowest apparent temperature is at '+ body.daily.data[0].apparentTemperatureLow
-        +'  (Units : Celsius)')
+        +'  (Units : Celsius)  *Apparent temperature is the temperature equivalent perceived by humans*')
         )}
   })
 }
